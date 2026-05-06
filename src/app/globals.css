@@ -1,26 +1,228 @@
 @import "tailwindcss";
 
+/* ─── Pie & Patty Co Brand Tokens ───────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --brand-red: #DC2626;
+  --brand-red-dark: #B91C1C;
+  --brand-red-light: #EF4444;
+  --oyalo-navy: #0F172A;
+  --oyalo-white: #FFFFFF;
+  --oyalo-off-white: #F8FAFC;
+  --oyalo-gray: #64748B;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* ─── Floating Animation (Hero food images) ─────────────────── */
+@keyframes float {
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  33% {
+    transform: translateY(-18px) rotate(1deg);
+  }
+
+  66% {
+    transform: translateY(-8px) rotate(-1deg);
   }
 }
 
+/* ─── Marquee / Ticker ──────────────────────────────────────── */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-slow {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+.animate-marquee-slow {
+  animation: marquee-slow 35s linear infinite;
+}
+
+/* ─── Fade-in Up ────────────────────────────────────────────── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s ease-out forwards;
+}
+
+/* ─── Float utility ─────────────────────────────────────────── */
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* ─── Social icon styles ─────────────────────────────────────── */
+.social-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.icon-container {
+  display: inline-flex;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background: #1f2937;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: 1px solid #374151;
+}
+
+.social-icon:hover .icon-container {
+  transform: translateY(-10px) scale(1.1);
+}
+
+.social-icon:hover .icon-label {
+  opacity: 1;
+  transform: translateY(5px);
+}
+
+.icon-label {
+  margin-top: 10px;
+  color: #1f2937;
+  font-weight: 600;
+  font-size: 0.85rem;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.social-icon.instagram:hover .icon-container {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  box-shadow: 0 0 20px rgba(225, 48, 108, 0.6);
+}
+
+.social-icon.facebook:hover .icon-container {
+  background: #1877F2;
+  box-shadow: 0 0 20px rgba(24, 119, 242, 0.6);
+}
+
+.social-icon.linkedin:hover .icon-container {
+  background: #0077b5;
+  box-shadow: 0 0 20px rgba(0, 119, 181, 0.6);
+}
+
+.social-icon:hover svg {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0) rotate(0);
+  }
+
+  20% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+
+  40% {
+    transform: translateX(5px) rotate(5deg);
+  }
+
+  60% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+
+  80% {
+    transform: translateX(5px) rotate(5deg);
+  }
+}
+
+.icon-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.social-icon:hover .icon-container::before {
+  opacity: 1;
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────────── */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--oyalo-white);
+  font-family: 'Inter', 'Outfit', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--oyalo-red);
+  border-radius: 3px;
+}
+
+/* ─── Video vignette overlay ─────────────────────────────── */
+.video-vignette {
+  position: relative;
+}
+
+.video-vignette::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(ellipse at center, transparent 60%, rgba(0, 0, 0, 0.35) 100%);
+  pointer-events: none;
 }
