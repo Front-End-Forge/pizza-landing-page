@@ -111,6 +111,16 @@ Built with ❤️ using Next.js and modern frontend technologies.
 
 ---
 
-## ⭐ Support
 
-If you like this project, consider giving it a ⭐ on GitHub.
+## 🤝 Support
+
+If you liked this project, consider giving it a ⭐ on GitHub.
+
+For collaborations, freelance work, or feedback:
+
+📧 spriyadharsini41@gmail.com
+
+GitHub:  
+https://github.com/Front-End-Forge
+
+---
