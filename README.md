@@ -1,36 +1,116 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🍕 Pie & Patty Co — Pizza Landing Page
 
-## Getting Started
+A visually stunning and fully responsive pizza landing page built with Next.js, featuring smooth animations, floating UI elements, interactive sections, and optimized performance across all devices.
 
-First, run the development server:
+---
+
+## 🚀 Live Demo
+
+https://pizza-landing-page-lake.vercel.app/
+
+---
+
+## ✨ Features
+
+- 🍕 Modern pizza-themed landing page
+- 📱 Fully responsive across all devices
+- 🎯 Interactive floating food animations
+- 🍔 Smooth UI interactions and transitions
+- 📌 Sticky responsive navigation bar
+- 📂 Mobile hamburger menu
+- ⚡ Optimized WebP assets for performance
+- 🎥 Scroll-based video section
+- 🌈 Clean modern UI inspired by premium landing pages
+
+---
+
+## 🛠️ Tech Stack
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+
+---
+
+## 📂 Project Structure
+
+```bash
+src/
+ ├── app/
+ │    ├── globals.css
+ │    ├── layout.tsx
+ │    └── page.tsx
+ │
+ ├── components/
+ │    └── ui/
+ │         ├── animated-feature-spotlight3d.tsx
+ │         ├── connect-with-us.tsx
+ │         ├── FloatingWrapper.tsx
+ │         ├── header.tsx
+ │         ├── hero-section.tsx
+ │         ├── menu-card.tsx
+ │         ├── primitives.tsx
+ │         └── scroll-video.tsx
+ │
+ └── lib/
+      └── utils.ts
+
+public/
+ ├── assets/
+ └── Videos/
+```
+
+---
+
+## ⚡ Getting Started
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/Front-End-Forge/pizza-landing-page.git
+```
+
+### 2️⃣ Navigate into the project
+
+```bash
+cd pizza-landing-page
+```
+
+### 3️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+### 4️⃣ Start development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your browser and visit:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🌐 Deployment
 
-To learn more about Next.js, take a look at the following resources:
+This project is deployed using Vercel.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 👨‍💻 Author
 
-## Deploy on Vercel
+### Front-End-Forge
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Built with ❤️ using Next.js and modern frontend technologies.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## ⭐ Support
+
+If you like this project, consider giving it a ⭐ on GitHub.
