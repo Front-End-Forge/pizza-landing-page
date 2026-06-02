@@ -34,6 +34,15 @@ export const metadata: Metadata = {
     url: "/",
     siteName: "Pie & Patty Co",
     type: "website",
+    images: [
+      {
+        url: "/og-image1.png",
+        width: 1200,
+        height: 630,
+        alt: "Pie & Patty Co Pizza",
+      },
+    ],
+  },
   },
   twitter: {
     card: "summary_large_image",
